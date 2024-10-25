@@ -1,0 +1,22 @@
+<div class="container d-flex justify-content-center">
+    <span class="text-center mt-3 fs-1 rounded-2 bg-success-subtle"
+        >Benvenuti su <strong class="title">Ciak, Erika gira!</strong></span
+    >
+</div>
+<hr />
+<div class="d-grid gap-2">
+    <h3 *ngIf="!user" class="text-center mt-5 mb-3">
+        Per accedere ai contenuti: <br />
+        <a class="btn btn-outline-primary btn-lg mt-2" [routerLink]="['login']"
+            >Login</a
+        >
+        <br />
+        oppure <br />
+        <a
+            class="btn btn-outline-primary btn-lg mt-2"
+            [routerLink]="['register']"
+            >Registrati</a
+        >
+    </h3>
+    <app-film *ngIf="user"></app-film>
+</div>
